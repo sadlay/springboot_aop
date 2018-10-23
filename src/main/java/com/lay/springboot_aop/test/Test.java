@@ -14,8 +14,12 @@ public class Test {
         HelloService helloService=new HelloServiceImpl();
         //按照约定获取proxy
         HelloService proxy=(HelloService)ProxyBean.getProxyBean(helloService,new MyInterceptor());
+        System.out.println("\n################ invoke method sayHello ##########################\n");
         proxy.sayHello("Lay");
-        System.out.println("\n################ name is null!##########################\n");
+        System.out.println("\n################ invoke method sayHello param name is null!##########################\n");
         proxy.sayHello(null);
+        System.out.println("\n################ invoke method sayBye with return value ##########################\n");
+        String words=proxy.sayBye("goodbye");
+        System.out.println("in test main  "+words);
     }
 }

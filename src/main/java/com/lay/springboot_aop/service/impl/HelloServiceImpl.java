@@ -11,4 +11,10 @@ public class HelloServiceImpl implements HelloService{
         }
         System.out.println("hello   "+name);
     }
+
+	@Override
+	public String sayBye(String words) {
+		System.out.println("Bye   "+words);
+		return words;
+	}
 }
