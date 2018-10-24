@@ -26,6 +26,7 @@ public class ProxyBean implements InvocationHandler{
         proxyBean.interceptor=interceptor;
         //生成代理对象
         Object proxy=Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(),proxyBean);
+        //Object proxy=Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getClasses(), proxyBean);
         //返回代理对象
         return proxy;
     }
