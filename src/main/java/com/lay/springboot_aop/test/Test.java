@@ -8,12 +8,11 @@ import com.lay.springboot_aop.intercept.impl.MyInterceptor;
 import com.lay.springboot_aop.proxy.ProxyBean;
 import com.lay.springboot_aop.service.HelloService;
 import com.lay.springboot_aop.service.impl.HelloServiceImpl;
-import com.sun.org.apache.bcel.internal.generic.INVOKEVIRTUAL;
 
 public class Test {
     
     public static void main(String[] args) {
-    	testProxy();
+        testProxy();
     }
     
     private static void testProxy() {
